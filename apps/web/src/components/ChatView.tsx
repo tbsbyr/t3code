@@ -6292,6 +6292,8 @@ export default function ChatView(props: ChatViewProps) {
             description: toastCopy.description,
           }),
         );
+      } else if (submissionIntent === "foreground") {
+        queuedRunsControlRef.current?.steerNext(false);
       }
       return;
     }
